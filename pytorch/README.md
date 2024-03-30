@@ -1,4 +1,4 @@
-## Edge Machine Learning: Pytorch Library 
+## Edge Machine Learning: PyTorch Library 
 
 This package includes PyTorch implementations of following algorithms and training
 techniques developed as part of EdgeML. The PyTorch graphs for the forward/backward
