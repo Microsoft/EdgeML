@@ -1,0 +1,4 @@
+MinTestMAE: 2.3353044986724854 at Epoch(totalEpochs): 83(100) ModelSize: 0.7109375 KB hasSparse: True Param Directory: /home/siddhant/Documents/minor/EdgeML/examples/pytorch/Bonsai/abalone/PyTorchBonsaiResults/12_20_06_27_11_23
+MinTestMAE: 2.34165620803833 at Epoch(totalEpochs): 33(100) ModelSize: 0.56640625 KB hasSparse: True Param Directory: /home/siddhant/Documents/minor/EdgeML/examples/pytorch/Bonsai/abalone/PyTorchBonsaiResults/12_23_52_27_11_23
+MinTestMAE: 2.2278079986572266 at Epoch(totalEpochs): 33(100) ModelSize: 0.2265625 KB hasSparse: True Param Directory: /home/siddhant/Documents/minor/EdgeML/examples/pytorch/Bonsai/abalone/PyTorchBonsaiResults/12_24_41_27_11_23
+MinTestMAE: 2.464694023132324 at Epoch(totalEpochs): 59(100) ModelSize: 0.1328125 KB hasSparse: True Param Directory: /home/siddhant/Documents/minor/EdgeML/examples/pytorch/Bonsai/abalone/PyTorchBonsaiResults/04_42_31_30_11_23

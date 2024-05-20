@@ -1,0 +1,8 @@
+README.md
+setup.py
+edgeml_tf/__init__.py
+edgeml_tf/utils.py
+edgeml_tf.egg-info/PKG-INFO
+edgeml_tf.egg-info/SOURCES.txt
+edgeml_tf.egg-info/dependency_links.txt
+edgeml_tf.egg-info/top_level.txt

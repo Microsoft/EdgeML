@@ -1,0 +1,12 @@
+The "bank" family of datasets are generated from a simplistic simulator, which
+simulates the queues in a series of banks. The simulator was constructed with
+the explicit purpose of generating a family of datasets for DELVE.
+
+Customers come from several residential areas, chose their prefered bank
+depending on distances and have tasks of varying complexity, and various
+levels of patience. Each bank has several queues, that open and close
+according to demand. The tellers have various effectivities, and customers
+may change queue, if their patience expires. In the "rej" prototasks, the
+object is to predict the rate of rejections, ie the fraction of customers
+that are turned away from the bank because all the open tellers have full
+queues. 

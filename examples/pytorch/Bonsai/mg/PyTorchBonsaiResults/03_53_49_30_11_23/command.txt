@@ -1,0 +1,1 @@
+python bonsai_example.py -dir mg -d 3 -p 5 -rW 0.001 -rZ 0.0001 -rV 0.001 -rT 0.001 -sZ 0.2 -sW 0.3 -sV 0.3 -sT 0.62 -e 100 -s 1 -regression True

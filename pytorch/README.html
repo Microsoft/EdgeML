@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="edge-machine-learning-pytorch-library">Edge Machine Learning: Pytorch Library</h2>
+<p>This package includes PyTorch implementations of following algorithms and training
+techniques developed as part of EdgeML. The PyTorch graphs for the forward/backward
+pass of these algorithms are packaged as <code>edgeml_pytorch.graph</code> and the trainers
+for these algorithms are in <code>edgeml_pytorch.trainer</code>.</p>
+<ol>
+<li><a href="https://github.com/microsoft/EdgeML/blob/master/docs/publications/Bonsai.pdf">Bonsai</a>: <code>edgeml_pytorch.graph.bonsai</code> implements
+the Bonsai prediction graph. The three-phase training routine for Bonsai is decoupled
+from the forward graph to facilitate a plug and play behaviour wherein Bonsai can be
+combined with or used as a final layer classifier for other architectures (RNNs, CNNs).
+See <code>edgeml_pytorch.trainer.bonsaiTrainer</code> for 3-phase training.</li>
+<li><a href="https://github.com/microsoft/EdgeML/blob/master/docs/publications/ProtoNN.pdf">ProtoNN</a>: <code>edgeml_pytorch.graph.protoNN</code> implements the
+ProtoNN prediction functions. The training routine for ProtoNN is decoupled from the forward
+graph to facilitate a plug and play behaviour wherein ProtoNN can be combined with or used
+as a final layer classifier for other architectures (RNNs, CNNs). The training routine is
+implemented in <code>edgeml_pytorch.trainer.protoNNTrainer</code>.</li>
+<li><a href="https://github.com/microsoft/EdgeML/blob/master/docs/publications/FastGRNN.pdf">FastRNN &amp; FastGRNN</a>: <code>edgeml_pytorch.graph.rnn</code> provides
+various RNN cells --- including new cells <code>FastRNNCell</code> and <code>FastGRNNCell</code> as well as
+<code>UGRNNCell</code>, <code>GRUCell</code>, and <code>LSTMCell</code> --- with features like low-rank parameterisation
+of weight matrices and custom non-linearities. Akin to Bonsai and ProtoNN, the three-phase
+training routine for FastRNN and FastGRNN is decoupled from the custom cells to enable plug and
+play behaviour of the custom RNN cells in other architectures (NMT, Encoder-Decoder etc.).
+Additionally, numerically equivalent CUDA-based implementations <code>FastRNNCUDACell</code> and
+<code>FastGRNNCUDACell</code> are provided for faster training.
+<code>edgeml_pytorch.graph.rnn.Fast(G)RNN(CUDA)</code> provides unrolled RNNs equivalent to <code>nn.LSTM</code> and <code>nn.GRU</code>.
+<code>edgeml_pytorch.trainer.fastmodel</code> presents a sample multi-layer RNN + multi-class classifier model.</li>
+<li><a href="https://github.com/microsoft/EdgeML/blob/master/docs/publications/SRNN.pdf">S-RNN</a>: <code>edgeml_pytorch.graph.rnn.SRNN2</code> implements a
+2 layer SRNN network which can be instantiated with a choice of RNN cell. The training
+routine for SRNN is in <code>edgeml_pytorch.trainer.srnnTrainer</code>.</li>
+<li><a href="https://github.com/microsoft/EdgeML/blob/master/docs/publications/drocc.pdf">DROCC &amp; DROCC-LF</a>: <code>edgeml_pytorch.trainer.drocc_trainer</code> implements
+a DROCC meta-trainer for training any given model architecture
+for one-class classification on the supplied dataset. <code>edgeml_pytorch.trainer.drocclf_trainer</code> implements the DROCC-LF variant
+for training models for one-class classification with limited negatives.</li>
+<li><a href="https://github.com/microsoft/EdgeML/blob/master/docs/publications/RNNPool.pdf">RNNPool</a>: <code>edgeml_pytorch.graph.RNNPool</code> implements
+the RNNPool pooling layer which can be instantiated with the dimensions of the input patch
+and the hidden states. Currently only the inference code is implemented, as training routines
+are written individually for specific use cases. Please checkout the <a href="https://github.com/microsoft/EdgeML/tree/master/examples/pytorch/vision">RNNPool examples</a> for reference implementations
+of the trainer modules.</li>
+</ol>
+<p>Usage directions and examples notebooks for this package are provided <a href="https://github.com/microsoft/EdgeML/blobl/master/examples/pytorch">here</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>It is highly recommended that EdgeML be installed in a virtual environment.
+Please create a new virtual environment using your environment manager
+(<a href="https://virtualenv.pypa.io/en/stable/userguide/#usage">virtualenv</a> or
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">Anaconda</a>).
+Make sure the new environment is active before running the below mentioned commands.</p>
+<p>Use pip to install requirements before installing the <code>edgeml_pytorch</code> library.
+Details for cpu based installation and gpu based installation provided below.</p>
+<h3 id="cpu">CPU</h3>
+<pre class="hljs"><code><div>pip install -r requirements-cpu.txt
+pip install -e .
+</div></code></pre>
+<p>Tested on Python3.6 with &gt;= PyTorch 1.1.0.</p>
+<h3 id="gpu">GPU</h3>
+<p>Install appropriate CUDA and cuDNN [Tested with &gt;= CUDA 8.1 and cuDNN &gt;= 6.1]</p>
+<pre class="hljs"><code><div>pip install -r requirements-gpu.txt
+pip install -e .
+pip install -e edgeml_pytorch/cuda/
+</div></code></pre>
+<p><strong>Note</strong>: For using the optimized FastGRNNCUDA implementation, it is recommended to use CUDA v10.1, gcc 7.5 and cuDNN v7.6 and torch==1.4.0. Also, there are some known issues when compiling custom CUDA kernels on Windows <a href="https://github.com/pytorch/pytorch/issues/11004">pytorch/#11004</a>.</p>
+<p>Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the MIT license.</p>
+
+</body>
+</html>

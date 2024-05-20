@@ -1,0 +1,1 @@
+MinTestMAE: 8.434799303589594e-23 at Epoch(totalEpochs): 100(100) ModelSize: 0.34765625 KB hasSparse: True Param Directory: /home/siddhant/Documents/minor/EdgeML/examples/pytorch/Bonsai/bank/bank-8nm/PyTorchBonsaiResults/14_40_32_27_11_23
