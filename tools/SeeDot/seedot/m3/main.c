@@ -104,15 +104,15 @@ int main(int argc, char** argv) {
   }
 
   if (xFile == NULL) {
-    printf("An error occured while opening the X (input) file.\n");
+    printf("An error occurred while opening the X (input) file.\n");
     return -1;
   }
   if (yFile == NULL) {
-    printf("An error occured while opening the Y (ground truth) file.\n");
+    printf("An error occurred while opening the Y (ground truth) file.\n");
     return -1;
   }
   if (outputLog == NULL) {
-    printf("An error occured while opening the output log file.\n");
+    printf("An error occurred while opening the output log file.\n");
     return -1;
   }
 
